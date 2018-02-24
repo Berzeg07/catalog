@@ -1,0 +1,326 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h4,
+h5,
+h3,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+span {
+    display: inline-block;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+main{
+	padding: 0 15px;
+	@media only screen and (min-width: 768px) {
+		padding: 0px;
+	}
+}
+
+.container {
+    max-width: 1180px;
+	margin: 0 auto;
+	@media only screen and (min-width: 768px) {
+		padding: 0px 15px;
+	}
+}
+
+.main-title{
+	color: #444;
+	font-size: 32px;
+	font-weight: 500;
+}
+
+// header
+.header {
+    @media only screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.logo {
+	text-align: center;
+}
+
+.logo a {
+    font-size: 30px;
+    color: #1FA67A;
+    display: inline-block;
+    text-decoration: none;
+	padding: 15px 0px;
+	transition:0.5s;
+	&:hover{
+		opacity: 0.5;
+	}
+	@media only screen and (min-width: 768px) {
+		padding: 10px 0px;
+	}
+}
+
+.main-nav ul {
+    text-align: center;
+    @media only screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.main-nav ul li {
+    border-bottom: 1px solid white;
+}
+
+.main-nav {
+    &_link {
+        color: white;
+        display: inline-block;
+        padding: 15px 0px;
+        background: #1FA67A;
+        text-decoration: none;
+        display: block;
+        transition: 0.5s;
+    }
+    &_link:hover {
+        background: #3AC195;
+	}
+	@media only screen and (min-width: 768px) {
+		&_link {
+			background: white;
+			display: inline-block;
+			color:#1FA67A;
+			padding: 19px 15px;
+		}
+		&_link:hover {
+			background: #3AC195;
+			color:white;
+		}
+		.active{
+			background: #3AC195;
+			color:white;
+		}
+	}
+}
+
+// slider
+.slider-wrap{
+	display: none;
+	@media only screen and (min-width: 768px) {
+		display: block;
+		margin-bottom: 60px;
+	}
+}
+
+.promo_slider{
+	.disabled{
+		display: block;
+	}
+	.nav-left{
+        background: url(../img/nav-left.png) no-repeat;
+        width: 50px;
+		height: 50px;
+		opacity: 0.5;
+        position:absolute;
+        top:50%;
+        left:10px;
+		transform: translateY(-50%);
+		display: none;
+		&:hover{
+			opacity: 1;
+		}
+    }
+    .nav-right{
+        background: url(../img/nav-right.png) no-repeat;
+        width: 50px;
+		height: 50px;
+		opacity: 0.5;
+        position:absolute;
+        top:50%;
+        right:10px;
+		transform: translateY(-50%);
+		display: none;
+		&:hover{
+			opacity: 1;
+		}
+    }
+    .owl-dots{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20px;
+        .owl-dot{
+            display: inline-block;
+            margin-right: 10px;
+            span{
+                float: left;
+                display: inline-block;
+                border-radius:10em;
+                background:#fff;
+                width: 12px;
+                height: 12px; 
+				background:black;
+				opacity:0.5;
+            }
+        }
+        .active{
+            span{
+				opacity:1;
+                border-radius:10em;
+            }
+        }
+    }
+}
+
+// blog
+.blog-box{
+	display: flex;
+	justify-content: space-between;
+	&_item .main-title{
+		padding-bottom: 10px;
+	}
+	&_item{
+		&__inner{
+			padding: 22px 0px 70px;
+			border-top:1px solid #EEEEEE;
+			border-bottom:1px solid #EEEEEE;
+		}
+	}
+	span{
+		display: inline-block;
+		position: relative;
+		padding-left: 25px;
+		margin-bottom: 20px;
+		&:before{
+			content:"";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 17px;
+			height: 17px;
+			background: url(../img/calendar.svg) no-repeat;
+			background-size: cover;
+		}
+	}
+}
