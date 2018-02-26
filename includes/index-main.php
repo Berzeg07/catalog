@@ -23,7 +23,7 @@
         <div class="blog-box_content">
 
             <div class="blog-box_item">    
-                <h1 class="main-title">Заголовок Статьи</h1>
+                <h2 class="main-title">Заголовок Статьи</h2>
                 <span>7 февраля, 2018</span>
 
                 <div class="blog-box_item__inner">
@@ -40,7 +40,7 @@
             </div>
 
             <div class="blog-box_item">    
-                <h1 class="main-title">Заголовок Статьи</h1>
+                <h2 class="main-title">Заголовок Статьи</h2>
                 <span>7 февраля, 2018</span>
 
                 <div class="blog-box_item__inner">
@@ -57,7 +57,7 @@
             </div>
 
             <div class="blog-box_item">    
-                <h1 class="main-title">Заголовок Статьи</h1>
+                <h2 class="main-title">Заголовок Статьи</h2>
                 <span>7 февраля, 2018</span>
 
                 <div class="blog-box_item__inner">
@@ -75,6 +75,7 @@
 
             <div class="pagination">
                 <ul>
+                    <li><a href="#">Назад</a></li>
                     <li><a class="active" href="#">1</a></li>
                     <li><a href="#">2</a></li>
                     <li><a href="#">3</a></li>
@@ -86,8 +87,76 @@
 
         </div>
         <!-- Sidebar -->
-        <div class="blog-box_sidebar">
-            <p>sidebar</p>
+        <div class="sidebar">
+
+            <div class="sidebar_search">
+                <form action="#" method="post">
+                    <input class="search-area" type="text" placeholder="Поиск">
+                    <button type="submit"></button>
+                </form>
+            </div>
+
+            <div class="sidebar_popular">
+                <h2 class="main-title">Свежие записи</h2>
+                <ul>
+                    <li>
+                        <div class="sidebar_popular__img">
+                            <a href="#"><img src="img/test-img.jpg" alt=""></a>
+                        </div>
+                        <div class="sidebar_popular__title"> 
+                            <a href="#">Название статьи</a><br>
+                            <span>26 февраля, 2018</span>
+                        </div>
+                    </li>
+                    <li>
+                         <div class="sidebar_popular__img">
+                            <a href="#"><img src="img/test-img.jpg" alt=""></a>
+                        </div>
+                        <div class="sidebar_popular__title"> 
+                            <a href="#">Название статьи</a><br>
+                            <span>26 февраля, 2018</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sidebar_popular__img">
+                            <a href="#"><img src="img/test-img.jpg" alt=""></a>
+                        </div>
+                        <div class="sidebar_popular__title"> 
+                            <a href="#">Название статьи</a><br>
+                            <span>26 февраля, 2018</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sidebar_popular__img">
+                            <a href="#"><img src="img/test-img.jpg" alt=""></a>
+                        </div>
+                        <div class="sidebar_popular__title"> 
+                            <a href="#">Название статьи</a><br>
+                            <span>26 февраля, 2018</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sidebar_popular__img">
+                            <a href="#"><img src="img/test-img.jpg" alt=""></a>
+                        </div>
+                        <div class="sidebar_popular__title"> 
+                            <a href="#">Название статьи</a><br>
+                            <span>26 февраля, 2018</span>
+                        </div>
+                    </li>
+                   
+                </ul>
+            </div>
+
+            <div class="sidebar_form">
+            <h2 class="main-title">Задать вопрос</h2>
+                <form action="#" method="get">
+                    <input class="search-area" type="text" placeholder="Ваше имя" required>
+                    <input class="search-area" type="email" placeholder="Email" required>
+                    <textarea></textarea>
+                    <button class="blog-box_btn" type="submit">Отправить</button>
+                </form>
+            </div>
         </div>
 
     </div>

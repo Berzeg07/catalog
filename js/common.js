@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
 	$('.promo_slider').owlCarousel({
         loop: true,
         margin: 0,
@@ -23,7 +22,19 @@ $(document).ready(function(){
 	$(".main-nav_burger").click(function(){
 		$(".main-nav ul").slideToggle(500);
 	});
-	// Конец Мобильное меню
+
+	// аккордеон в каталоге
+	$(".cat-list").click(function(e){
+		e.preventDefault();
+        $("this").children().slideToggle(300);
+	});
+
+
+
+
+
+
+
 
 	
 
