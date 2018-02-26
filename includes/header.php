@@ -19,6 +19,7 @@
     <div class="logo"><a href="#">PrintHouse</a></div>
 
     <nav class="main-nav">
+        <span class="main-nav_burger"></span>
         <ul>
             <li><a class="main-nav_link active" href="#">Главная</a></li>
             <li><a class="main-nav_link" href="#">Каталог</a></li>

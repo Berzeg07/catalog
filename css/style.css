@@ -129,6 +129,8 @@ span {
 
 body {
   font-family: 'Roboto Condensed', sans-serif;
+  color: #6B6B6B;
+  font-size: 16px;
 }
 
 main {
@@ -142,7 +144,7 @@ main {
 }
 
 .container {
-  max-width: 1180px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 
@@ -154,8 +156,14 @@ main {
 
 .main-title {
   color: #444;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 500;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-title {
+    font-size: 30px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -188,19 +196,80 @@ main {
   }
 }
 
+.main-nav {
+  margin-bottom: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-nav {
+    margin-bottom: 0;
+  }
+}
+
+.main-nav {
+  min-height: 50px;
+  background: #1FA67A;
+  width: 100%;
+  position: relative;
+}
+
+.main-nav_burger {
+  position: absolute;
+  left: 15px;
+  top: 13px;
+  width: 33px;
+  height: 23px;
+  background: url(../img/burger.png) no-repeat;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.main-nav_burger:hover {
+  opacity: 0.5;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-nav {
+    background: none;
+    width: unset;
+  }
+  .main-nav_burger {
+    display: none;
+  }
+}
+
 .main-nav ul {
   text-align: center;
+  display: none;
+  padding-top: 50px;
 }
 
 @media only screen and (min-width: 768px) {
   .main-nav ul {
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
+    padding-top: 0;
   }
 }
 
 .main-nav ul li {
   border-bottom: 1px solid white;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-nav ul li {
+    border-bottom: none;
+  }
+}
+
+.main-nav ul li:first-child {
+  border-top: 1px solid white;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-nav ul li:first-child {
+    border-top: none;
+  }
 }
 
 .main-nav_link {
@@ -314,14 +383,57 @@ main {
   justify-content: space-between;
 }
 
+.blog-box_content {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
 .blog-box_item .main-title {
   padding-bottom: 10px;
 }
 
+.blog-box_img {
+  max-width: 366px;
+  border: 1px solid #EEEEEE;
+  padding: 4px 4px 0px 4px;
+  border-radius: 5px;
+}
+
+.blog-box_article {
+  max-width: 360px;
+  padding-top: 20px;
+  text-align: right;
+}
+
+@media only screen and (min-width: 762px) {
+  .blog-box_article {
+    padding-left: 20px;
+    padding-top: 0;
+  }
+}
+
+.blog-box_article p {
+  text-align: left;
+}
+
+.blog-box_img img {
+  width: 100%;
+  height: auto;
+}
+
 .blog-box_item__inner {
-  padding: 22px 0px 70px;
+  margin-bottom: 40px;
+  padding: 15px 0px 25px;
   border-top: 1px solid #EEEEEE;
   border-bottom: 1px solid #EEEEEE;
+}
+
+@media only screen and (min-width: 768px) {
+  .blog-box_item__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 0px 55px;
+  }
 }
 
 .blog-box span {
@@ -329,6 +441,7 @@ main {
   position: relative;
   padding-left: 25px;
   margin-bottom: 20px;
+  font-size: 14px;
 }
 
 .blog-box span:before {
@@ -340,5 +453,75 @@ main {
   height: 17px;
   background: url(../img/calendar.svg) no-repeat;
   background-size: cover;
+}
+
+.blog-box_btn {
+  display: inline-block;
+  border: 1px solid #E8E8E8;
+  color: #1FA67A;
+  background-color: transparent;
+  margin-top: 10px;
+  text-decoration: none;
+  padding: 5px 16px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.blog-box_btn:hover {
+  color: white;
+  background: #1FA67A;
+}
+
+.blog-box_sidebar {
+  display: none;
+  width: 360px;
+  outline: 1px solid red;
+}
+
+@media only screen and (min-width: 992px) {
+  .blog-box_sidebar {
+    display: block;
+  }
+}
+
+.pagination ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pagination li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.pagination li {
+  margin-bottom: 5px;
+}
+
+.pagination li a {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #E9E9E9;
+  color: #1FA67A;
+  padding: 15px;
+  padding: 2px 10px;
+  transition: 0.5s;
+}
+
+.pagination li a:hover {
+  background: #1FA67A;
+  color: white;
+  border: 1px solid #1FA67A;
+}
+
+@media only screen and (min-width: 768px) {
+  .pagination li a {
+    padding: 7px 15px;
+  }
+}
+
+.pagination .active {
+  background: #1FA67A;
+  color: white;
+  border: 1px solid #1FA67A;
 }
 /*# sourceMappingURL=style.css.map */
