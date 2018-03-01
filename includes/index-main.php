@@ -89,7 +89,7 @@
         <!-- Sidebar -->
         <div class="sidebar">
 
-            <div class="sidebar_search">
+            <div class="search-box">
                 <form action="#" method="post">
                     <input class="search-area" type="text" placeholder="Поиск">
                     <button type="submit"></button>
@@ -97,7 +97,7 @@
             </div>
 
             <div class="sidebar_popular">
-                <h2 class="main-title">Свежие записи</h2>
+                <h3 class="main-title">Свежие записи</h3>
                 <ul>
                     <li>
                         <div class="sidebar_popular__img">
@@ -149,7 +149,7 @@
             </div>
 
             <div class="sidebar_form">
-            <h2 class="main-title">Задать вопрос</h2>
+            <h3 class="main-title">Задать вопрос</h3>
                 <form action="#" method="get">
                     <input class="search-area" type="text" placeholder="Ваше имя" required>
                     <input class="search-area" type="email" placeholder="Email" required>

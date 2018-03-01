@@ -132,40 +132,68 @@ span {
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
+
+// переменные
+$nav-link-color: #3AC195;
+$btn-bg: #3AC195;
+$text-color: #6B6B6B;
+$text-size: 16px;
+$title-color: #444;
+$title-size-mb: 24px;
+$title-size-desc: 26px;
+$border-color: #E8E8E8;
 
 body {
     font-family: 'Roboto Condensed', sans-serif;
-    color: #6B6B6B;
-    font-size: 16px;
-}
-
-main {
-    padding: 0 15px;
-    @media only screen and (min-width: 768px) {
-        padding: 0px;
-    }
+    color:$text-color;
+    font-size: $text-size;
 }
 
 .container {
     max-width: 1140px;
     margin: 0 auto;
-    @media only screen and (min-width: 768px) {
-        padding: 0px 15px;
-    }
+    padding: 0 15px;
 }
 
 .main-title {
-    color: #444;
-    font-size: 24px;
+    color: $title-color;
+    font-size: $title-size-mb;
     font-weight: 500;
     @media only screen and (min-width: 768px) {
-        font-size: 30px;
+        font-size: $title-size-desc;
     }
+}
+
+.bradcrumbs{
+    padding: 5px 15px;
+    max-width: 1140px;
+    border-radius: 5px;
+    margin: 25px auto;
+    background: #F5F5F5;
+    font-size: 15px;
+}
+
+.bradcrumbs ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bradcrumbs li:not(:last-child) {
+    margin-right: 5px;
+}
+
+.bradcrumbs li:not(:last-child) a{
+    color: #444444;
+}
+
+.bradcrumbs a{
+    text-decoration: none;
+    color:inherit;
 }
 
 // header
@@ -204,13 +232,14 @@ main {
 
 .main-nav {
     min-height: 50px;
-    background: #1FA67A;
+    // background: #1FA67A;
+    background: $btn-bg;
     width: 100%;
     position: relative;
     &_burger {
         position: absolute;
         left: 15px;
-        top: 13px;
+        top: 15px;
         width: 33px;
         height: 23px;
         background: url(../img/burger.png) no-repeat;
@@ -259,27 +288,27 @@ main {
         color: white;
         display: inline-block;
         padding: 15px 0px;
-        background: #1FA67A;
+        background: $btn-bg;
         text-decoration: none;
         display: block;
         transition: 0.5s;
     }
     &_link:hover {
-        background: #3AC195;
+        background: $btn-bg;
     }
     @media only screen and (min-width: 768px) {
         &_link {
             background: white;
             display: inline-block;
-            color: #1FA67A;
+            color: $nav-link-color;
             padding: 19px 15px;
         }
         &_link:hover {
-            background: #3AC195;
+            background: $btn-bg;
             color: white;
         }
         .active {
-            background: #3AC195;
+            background: $btn-bg;
             color: white;
         }
     }
@@ -290,7 +319,6 @@ main {
     display: none;
     @media only screen and (min-width: 768px) {
         display: block;
-        margin-bottom: 60px;
     }
 }
 
@@ -358,6 +386,7 @@ main {
 .blog-box {
     display: flex;
     justify-content: space-between;
+    margin-top: 60px;
     &_content {
         max-width: 750px;
         margin: 0 auto;
@@ -369,10 +398,10 @@ main {
         max-width: 366px;
         border: 1px solid #EEEEEE;
         padding: 4px 4px 0px 4px;
-		border-radius: 5px;
-		@media only screen and (min-width: 768px) {
-			height: 209px;
-		}
+        border-radius: 5px;
+        @media only screen and (min-width: 768px) {
+            height: 209px;
+        }
     }
     &_article {
         max-width: 360px;
@@ -388,31 +417,31 @@ main {
     }
     &_img img {
         width: 100%;
-		height: auto;
+        height: auto;
     }
     &_item {
-		span {
-			display: inline-block;
-			position: relative;
-			padding-left: 25px;
-			margin-bottom: 20px;
-			font-size: 14px;
-			&:before {
-				content: "";
-				position: absolute;
-				left: 0;
-				top: 0;
-				width: 17px;
-				height: 17px;
-				background: url(../img/calendar.svg) no-repeat;
-				background-size: cover;
-			}
-		}
+        span {
+            display: inline-block;
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 17px;
+                height: 17px;
+                background: url(../img/calendar.svg) no-repeat;
+                background-size: cover;
+            }
+        }
         &__inner {
             margin-bottom: 40px;
             padding: 15px 0px 25px;
-            border-top: 1px solid #EEEEEE;
-            border-bottom: 1px solid #EEEEEE;
+            border-top: 1px solid $border-color;
+            border-bottom: 1px solid $border-color;
             @media only screen and (min-width: 768px) {
                 display: flex;
                 justify-content: space-between;
@@ -420,11 +449,10 @@ main {
             }
         }
     }
-
     &_btn {
         display: inline-block;
-        border: 1px solid #E8E8E8;
-        color: #1FA67A;
+        border: 1px solid $border-color;
+        color: $nav-link-color;
         background-color: transparent;
         margin-top: 10px;
         text-decoration: none;
@@ -433,125 +461,128 @@ main {
         transition: 0.5s;
         &:hover {
             color: white;
-            background: #1FA67A;
+            background: $btn-bg;
+            border: 1px solid $btn-bg;
         }
     }
 }
-.search-area{
-	width: 100%;
-	color: #666;
-	border: 1px solid #E8E8E8;
-	height: 34px;
-	padding: 10px 46px 10px 10px;
-	outline: none;
-	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-	&:focus{
-		border:1px solid #02895D;
-	}
+
+.search-box {
+    position: relative;
 }
-.sidebar {
-	display: none;
-	max-width: 315px;
-	padding-left: 15px;
-	width: 100%;
-	@media only screen and (min-width: 992px) {
-		display: block;
-	}
-	&_search{
-		position: relative;
-	}
-	&_search button{
-		position: absolute;
-		top: 0;
-		right: -2px;
-		width: 40px;
-		height: 34px;
-		cursor:pointer;
-		border-radius: 4px;
-		border: 1px solid #1FA67A;
-		border-top-left-radius: 0;
-		border-bottom-left-radius: 0;
-		background: #1FA67A url(../img/lupa.png) no-repeat;
-		background-position: center;
-		outline: none;
-		transition: 0.5s;
-		&:hover{
-			background-color: #3AC195;
-			border: 1px solid #3AC195;
-		}
-	}
-	&_popular{
-		margin-top: 25px;
-		&__img{
-			width: 60px;
-			height: 36px;
-			border: 1px solid #EEEEEE;
-			border-radius: 5px;
-			padding: 2px;
-		}
-		&__img img{
-			width: 100%;
-			height: auto;
-		}
-		&__title{
-			padding-left: 10px;
-			font-size: 14px;
-		}
-		&__title a{
-			color:inherit;
-			text-decoration: none;
-		}
-		&__title span{
-			font-style: italic;
-			color:black;
-			font-size: 12px;
-		}
-	}
-	&_popular ul li{
-		display: flex;
-		padding: 10px 0px;
-	}
-	&_popular ul{
-		padding: 10px;
-		border: 1px solid #EEEEEE;
-		border-radius:5px;
-	}
-	&_popular ul li:not(:last-child){
-		border-bottom: 1px solid #EEEEEE;
-	}
-	.main-title{
-		font-size: 22px;
-		margin-bottom: 15px;
-		color:inherit;
-	}
+.search-box button {
+    position: absolute;
+    top: 0;
+    right: -2px;
+    width: 40px;
+    height: 34px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid $btn-bg;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background: $btn-bg url(../img/lupa.png) no-repeat;
+    background-position: center;
+    outline: none;
+    transition: 0.5s;
+    &:hover {
+        background-color: lighten($btn-bg,10%);
+        border: 1px solid lighten($btn-bg,10%);
+    }
 }
 
-.sidebar_form{
-	margin-top: 25px;
-	.search-area{
-		margin-bottom: 10px;
-	}
-	form{
-		border-radius: 5px;
-		border: 1px solid #EEEEEE;
-		padding: 10px;
-		button{
-			cursor:pointer;
-		}
-	}
-	textarea{
-		width: 100%;
-		resize: none;
-		color: #666;
-		border: 1px solid #E8E8E8;
-		min-height: 90px;
-		padding: 10px 46px 10px 10px;
-		outline: none;
-		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-		&:focus{
-			border:1px solid #02895D;
-		}
-	}
+.search-area {
+    width: 100%;
+    color: #666;
+    border: 1px solid $border-color;
+    height: 34px;
+    padding: 10px 46px 10px 10px;
+    outline: none;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    &:focus {
+        border: 1px solid #02895D;
+    }
+}
+
+.sidebar {
+    display: none;
+    max-width: 315px;
+    padding-left: 15px;
+    width: 100%;
+    @media only screen and (min-width: 992px) {
+        display: block;
+    }
+    &_popular {
+        margin-top: 25px;
+        &__img {
+            width: 60px;
+            height: 36px;
+            border: 1px solid #EEEEEE;
+            border-radius: 5px;
+            padding: 2px;
+        }
+        &__img img {
+            width: 100%;
+            height: auto;
+        }
+        &__title {
+            padding-left: 10px;
+            font-size: 14px;
+        }
+        &__title a {
+            color: inherit;
+            text-decoration: none;
+        }
+        &__title span {
+            font-style: italic;
+            color: black;
+            font-size: 12px;
+        }
+    }
+    &_popular ul li {
+        display: flex;
+        padding: 10px 0px;
+    }
+    &_popular ul {
+        padding: 10px;
+        border: 1px solid #EEEEEE;
+        border-radius: 5px;
+    }
+    &_popular ul li:not(:last-child) {
+        border-bottom: 1px solid #EEEEEE;
+    }
+    .main-title {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+}
+
+.sidebar_form {
+    margin-top: 25px;
+    .search-area {
+        margin-bottom: 10px;
+    }
+    form {
+        border-radius: 5px;
+        border: 1px solid #EEEEEE;
+        padding: 10px;
+        button {
+            cursor: pointer;
+        }
+    }
+    textarea {
+        width: 100%;
+        resize: none;
+        color: #666;
+        border: 1px solid #E8E8E8;
+        min-height: 90px;
+        padding: 10px 46px 10px 10px;
+        outline: none;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        &:focus {
+            border: 1px solid #02895D;
+        }
+    }
 }
 
 .pagination ul {
@@ -570,15 +601,15 @@ main {
 .pagination li a {
     display: inline-block;
     text-decoration: none;
-    border: 1px solid #E9E9E9;
-    color: #1FA67A;
+    border: 1px solid $border-color;
+    color: $nav-link-color;
     padding: 15px;
     padding: 2px 10px;
     transition: 0.5s;
     &:hover {
-        background: #1FA67A;
+        background: $btn-bg;
         color: white;
-        border: 1px solid #1FA67A;
+        border: 1px solid $btn-bg;
     }
     @media only screen and(min-width:768px) {
         padding: 7px 15px;
@@ -590,9 +621,9 @@ main {
 }
 
 .pagination .active {
-    background: #1FA67A;
+    background: $btn-bg;
     color: white;
-    border: 1px solid #1FA67A;
+    border: 1px solid $btn-bg;
 }
 
 // footer
@@ -601,22 +632,18 @@ main {
     padding: 15px 0px;
     text-align: center;
     ul {
-		padding: 0 15px;
         @media only screen and(min-width: 500px) {
-			display: flex;
-			flex-wrap: wrap;
+            display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
-		}
-		@media only screen and(min-width: 1280px) {
-			padding: 0;
-		}
-	}
-	ul li{
-		padding-bottom: 8px;
-		@media only screen and(min-width: 500px) {
-			padding-bottom: 0;
-		}
-	}
+        }
+    }
+    ul li {
+        padding-bottom: 8px;
+        @media only screen and(min-width: 500px) {
+            padding-bottom: 0;
+        }
+    }
     &_copy {
         @media only screen and(min-width: 500px) {
             padding-top: 9px;
@@ -624,56 +651,171 @@ main {
     }
     &_phone {
         position: relative;
-		font-weight: 600;
-		text-decoration: none;
-		color:inherit; 
-		padding-left: 33px;
+        font-weight: 600;
+        text-decoration: none;
+        color: inherit;
+        padding-left: 33px;
         &:before {
             position: absolute;
             content: "";
             width: 30px;
             height: 30px;
             left: -2px;
-    		top: -7px;
-			background: url(../img/wu.png) no-repeat;
-			@media only screen and(min-width: 500px) {
-				top: 0;
-			}
-		}
-		@media only screen and(min-width: 500px) {
-			display: inline-block;
-			padding-top: 8px;
-		}
+            top: -7px;
+            background: url(../img/wu.png) no-repeat;
+            @media only screen and(min-width: 500px) {
+                top: 0;
+            }
+        }
+        @media only screen and(min-width: 500px) {
+            display: inline-block;
+            padding-top: 8px;
+        }
     }
 }
 
-.sidebar-catalog{
-	max-width: 315px;
-	width: 100%;
-	.main-title{
-		font-size: 22px;
-		margin-bottom: 15px;
-		color:#444444;
-	}
+.catalog {
+    &_inner {
+        @media only screen and(min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
 }
 
-.sidebar-catalog ul{
-	border: 1px solid #EEEEEE;
-	padding: 10px;
-	border-radius: 5px;
+.content-catalog {
+    width: 100%;
+    padding-left: 10px;
 }
 
-.sidebar-catalog li a{
-	color:inherit;
-	text-decoration: none;
+.sidebar-catalog {
+    width: 100%;
+    .main-title {
+        // font-size: 22px;
+        margin-bottom: 15px;
+        color: #444444;
+    }
+    @media only screen and(min-width: 768px) {
+        max-width: 250px;
+    }
+}
+
+.sidebar-catalog ul {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar-catalog li a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .sidebar-catalog li:not(:last-child) {
-	margin-bottom: 10px;
-	padding-bottom: 10px;
-	border-bottom: 1px solid #EEEEEE; 
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #EEEEEE;
 }
 
-.cat-list__inner{
-	display: none;
+@media only screen and(max-width: 768px) {
+    .cat-title {
+        border: 1px solid #3AC195;
+        border-radius: 5px;
+        padding: 5px 10px;
+    }
+}
+
+.sidebar-catalog {
+    position: relative;
+}
+
+.burger-cat {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.5;
+    right: 8px;
+    top: 5px;
+    width: 28px;
+    height: 28px;
+    background: url(../img/cat-burg.png) no-repeat center;
+    @media only screen and(min-width: 768px) {
+        display: none;
+    }
+}
+
+.cat-list {
+    display: none;
+    @media only screen and(min-width: 768px) {
+        display: block;
+    }
+}
+
+.cat-list li ul {
+    display: none;
+    border: none;
+    padding-top: 15px;
+}
+
+.cat-list .active {
+    display: block;
+    color: white;
+    background: #3AC195;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.product-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 25px;
+    @media only screen and(max-width: 992px){
+        justify-content: center;
+    }
+}
+
+.cart {
+    width: 196px; // height: 230px;
+    margin-bottom: 30px;
+    &_info {
+        padding-top: 15px;
+    }
+    &_info a {
+        font-size: 15px;
+        text-decoration: none;
+        color: inherit;
+    }
+    &_info span {
+        color: black;
+    }
+}
+
+.category-top {
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.category-top h1{
+    margin-bottom: 22px;
+}
+
+.category-top .search-box{
+    max-width: 370px;
+    width: 100%;
+}
+
+.cateory-bottom h2,
+.cateory-bottom p {
+    padding-bottom: 15px;
+}
+
+.content-catalog .pagination{
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.content-catalog .pagination ul{
+    margin-left: auto;
 }

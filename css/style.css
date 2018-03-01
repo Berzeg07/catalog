@@ -142,25 +142,10 @@ body {
   font-size: 16px;
 }
 
-main {
-  padding: 0 15px;
-}
-
-@media only screen and (min-width: 768px) {
-  main {
-    padding: 0px;
-  }
-}
-
 .container {
   max-width: 1140px;
   margin: 0 auto;
-}
-
-@media only screen and (min-width: 768px) {
-  .container {
-    padding: 0px 15px;
-  }
+  padding: 0 15px;
 }
 
 .main-title {
@@ -171,8 +156,35 @@ main {
 
 @media only screen and (min-width: 768px) {
   .main-title {
-    font-size: 30px;
+    font-size: 26px;
   }
+}
+
+.bradcrumbs {
+  padding: 5px 15px;
+  max-width: 1140px;
+  border-radius: 5px;
+  margin: 25px auto;
+  background: #F5F5F5;
+  font-size: 15px;
+}
+
+.bradcrumbs ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bradcrumbs li:not(:last-child) {
+  margin-right: 5px;
+}
+
+.bradcrumbs li:not(:last-child) a {
+  color: #444444;
+}
+
+.bradcrumbs a {
+  text-decoration: none;
+  color: inherit;
 }
 
 @media only screen and (min-width: 768px) {
@@ -217,7 +229,7 @@ main {
 
 .main-nav {
   min-height: 50px;
-  background: #1FA67A;
+  background: #3AC195;
   width: 100%;
   position: relative;
 }
@@ -225,7 +237,7 @@ main {
 .main-nav_burger {
   position: absolute;
   left: 15px;
-  top: 13px;
+  top: 15px;
   width: 33px;
   height: 23px;
   background: url(../img/burger.png) no-repeat;
@@ -285,7 +297,7 @@ main {
   color: white;
   display: inline-block;
   padding: 15px 0px;
-  background: #1FA67A;
+  background: #3AC195;
   text-decoration: none;
   display: block;
   transition: 0.5s;
@@ -299,7 +311,7 @@ main {
   .main-nav_link {
     background: white;
     display: inline-block;
-    color: #1FA67A;
+    color: #3AC195;
     padding: 19px 15px;
   }
   .main-nav_link:hover {
@@ -319,7 +331,6 @@ main {
 @media only screen and (min-width: 768px) {
   .slider-wrap {
     display: block;
-    margin-bottom: 60px;
   }
 }
 
@@ -390,6 +401,7 @@ main {
 .blog-box {
   display: flex;
   justify-content: space-between;
+  margin-top: 60px;
 }
 
 .blog-box_content {
@@ -458,8 +470,8 @@ main {
 .blog-box_item__inner {
   margin-bottom: 40px;
   padding: 15px 0px 25px;
-  border-top: 1px solid #EEEEEE;
-  border-bottom: 1px solid #EEEEEE;
+  border-top: 1px solid #E8E8E8;
+  border-bottom: 1px solid #E8E8E8;
 }
 
 @media only screen and (min-width: 768px) {
@@ -473,7 +485,7 @@ main {
 .blog-box_btn {
   display: inline-block;
   border: 1px solid #E8E8E8;
-  color: #1FA67A;
+  color: #3AC195;
   background-color: transparent;
   margin-top: 10px;
   text-decoration: none;
@@ -484,7 +496,34 @@ main {
 
 .blog-box_btn:hover {
   color: white;
-  background: #1FA67A;
+  background: #3AC195;
+  border: 1px solid #3AC195;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box button {
+  position: absolute;
+  top: 0;
+  right: -2px;
+  width: 40px;
+  height: 34px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #3AC195;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background: #3AC195 url(../img/lupa.png) no-repeat;
+  background-position: center;
+  outline: none;
+  transition: 0.5s;
+}
+
+.search-box button:hover {
+  background-color: #5fcfaa;
+  border: 1px solid #5fcfaa;
 }
 
 .search-area {
@@ -512,32 +551,6 @@ main {
   .sidebar {
     display: block;
   }
-}
-
-.sidebar_search {
-  position: relative;
-}
-
-.sidebar_search button {
-  position: absolute;
-  top: 0;
-  right: -2px;
-  width: 40px;
-  height: 34px;
-  cursor: pointer;
-  border-radius: 4px;
-  border: 1px solid #1FA67A;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  background: #1FA67A url(../img/lupa.png) no-repeat;
-  background-position: center;
-  outline: none;
-  transition: 0.5s;
-}
-
-.sidebar_search button:hover {
-  background-color: #3AC195;
-  border: 1px solid #3AC195;
 }
 
 .sidebar_popular {
@@ -591,7 +604,6 @@ main {
 .sidebar .main-title {
   font-size: 22px;
   margin-bottom: 15px;
-  color: inherit;
 }
 
 .sidebar_form {
@@ -643,17 +655,17 @@ main {
 .pagination li a {
   display: inline-block;
   text-decoration: none;
-  border: 1px solid #E9E9E9;
-  color: #1FA67A;
+  border: 1px solid #E8E8E8;
+  color: #3AC195;
   padding: 15px;
   padding: 2px 10px;
   transition: 0.5s;
 }
 
 .pagination li a:hover {
-  background: #1FA67A;
+  background: #3AC195;
   color: white;
-  border: 1px solid #1FA67A;
+  border: 1px solid #3AC195;
 }
 
 @media only screen and (min-width: 768px) {
@@ -667,9 +679,9 @@ main {
 }
 
 .pagination .active {
-  background: #1FA67A;
+  background: #3AC195;
   color: white;
-  border: 1px solid #1FA67A;
+  border: 1px solid #3AC195;
 }
 
 .footer {
@@ -678,21 +690,11 @@ main {
   text-align: center;
 }
 
-.footer ul {
-  padding: 0 15px;
-}
-
 @media only screen and (min-width: 500px) {
   .footer ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .footer ul {
-    padding: 0;
   }
 }
 
@@ -743,19 +745,34 @@ main {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .catalog_inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.content-catalog {
+  width: 100%;
+  padding-left: 10px;
+}
+
 .sidebar-catalog {
-  max-width: 315px;
   width: 100%;
 }
 
 .sidebar-catalog .main-title {
-  font-size: 22px;
   margin-bottom: 15px;
   color: #444444;
 }
 
+@media only screen and (min-width: 768px) {
+  .sidebar-catalog {
+    max-width: 250px;
+  }
+}
+
 .sidebar-catalog ul {
-  border: 1px solid #EEEEEE;
   padding: 10px;
   border-radius: 5px;
 }
@@ -771,7 +788,119 @@ main {
   border-bottom: 1px solid #EEEEEE;
 }
 
-.cat-list__inner {
+@media only screen and (max-width: 768px) {
+  .cat-title {
+    border: 1px solid #3AC195;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+}
+
+.sidebar-catalog {
+  position: relative;
+}
+
+.burger-cat {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0.5;
+  right: 8px;
+  top: 5px;
+  width: 28px;
+  height: 28px;
+  background: url(../img/cat-burg.png) no-repeat center;
+}
+
+@media only screen and (min-width: 768px) {
+  .burger-cat {
+    display: none;
+  }
+}
+
+.cat-list {
   display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .cat-list {
+    display: block;
+  }
+}
+
+.cat-list li ul {
+  display: none;
+  border: none;
+  padding-top: 15px;
+}
+
+.cat-list .active {
+  display: block;
+  color: white;
+  background: #3AC195;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.product-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 25px;
+}
+
+@media only screen and (max-width: 992px) {
+  .product-box {
+    justify-content: center;
+  }
+}
+
+.cart {
+  width: 196px;
+  margin-bottom: 30px;
+}
+
+.cart_info {
+  padding-top: 15px;
+}
+
+.cart_info a {
+  font-size: 15px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cart_info span {
+  color: black;
+}
+
+.category-top {
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.category-top h1 {
+  margin-bottom: 22px;
+}
+
+.category-top .search-box {
+  max-width: 370px;
+  width: 100%;
+}
+
+.cateory-bottom h2,
+.cateory-bottom p {
+  padding-bottom: 15px;
+}
+
+.content-catalog .pagination {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.content-catalog .pagination ul {
+  margin-left: auto;
 }
 /*# sourceMappingURL=style.css.map */
