@@ -11,6 +11,17 @@ $(document).ready(function () {
 		navText: ['<span class="nav-left"></span>', '<span class="nav-right"></span>'],
 	});
 
+	$('.product_slider').owlCarousel({
+		loop: true,
+		margin: 0,
+		nav: true,
+		dots: true,
+		items: 1,
+		autoplay: false,
+		autoplaySpeed: 1000,
+		navText: ['<span class="nav-left"></span>', '<span class="nav-right"></span>'],
+	});
+
 	$(".slider-wrap").hover(function () {
 		$(".nav-left, .nav-right").fadeIn(300);
 		$(this).mouseleave(function () {

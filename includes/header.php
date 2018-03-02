@@ -21,8 +21,8 @@
     <nav class="main-nav">
         <span class="main-nav_burger"></span>
         <ul>
-            <li><a class="main-nav_link active" href="#">Главная</a></li>
-            <li><a class="main-nav_link" href="#">Каталог</a></li>
+            <li><a class="main-nav_link active" href="index.php">Главная</a></li>
+            <li><a class="main-nav_link" href="catalog.php">Каталог</a></li>
             <li><a class="main-nav_link" href="#">Контакты</a></li>
         </ul>
     </nav>

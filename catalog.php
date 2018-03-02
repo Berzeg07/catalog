@@ -17,9 +17,7 @@
 
 <div class="bradcrumbs">
     <ul>
-        <li><a href="#">Каталог /</a></li>
-        <li><a href="#">спорт /</a></li>
-        <li><a>футболки с Хабибом</a></li>
+        <li><a href="#">Каталог </a></li>
     </ul>
 </div>  
 
@@ -56,7 +54,7 @@
 
         <div class="content-catalog">
             <div class="category-top">
-                <h1 class="main-title">Футболки с Хабибом</h1>
+                <h1 class="main-title">Каталог</h1>
                 <div class="search-box">
                     <form action="#" method="post">
                         <input class="search-area" type="text" placeholder="Поиск">
@@ -67,41 +65,47 @@
 
             <div class="product-box">
                 <div class="cart">
-                    <a href="#"><img src="img/haba.jpg" alt=""></a>
-                    <div class="cart_info">
-                        <a href="#">Мужская футболка ХБ<br> Khabib</a><br>
-                        <span>Цена: 1099 руб.</span>
+                    <a href="#"><img src="img/cat-img.jpg" alt=""></a>
+                    <a class="blog-box_btn cart_btn" href="category.php">Подробнее</a>
+                    <div class="cart_info cat_info">
+                        <a href="category.php">Спорт</a><br>
                     </div>
                 </div>
+
                 <div class="cart">
-                     <a href="#"><img src="img/haba.jpg" alt=""></a>
-                    <div class="cart_info">
-                        <a href="#">Мужская футболка ХБ<br> Khabib</a><br>
-                        <span>Цена: 1099 руб.</span>
+                    <a href="#"><img src="img/cat-img2.jpg" alt=""></a>
+                    <a class="blog-box_btn cart_btn" href="#">Подробнее</a>
+                    <div class="cart_info cat_info">
+                        <a href="#">Кавказ</a><br>
                     </div>
                 </div>
+
                 <div class="cart">
-                     <a href="#"><img src="img/haba.jpg" alt=""></a>
-                    <div class="cart_info">
-                        <a href="#">Мужская футболка ХБ<br> Khabib</a><br>
-                        <span>Цена: 1099 руб.</span>
+                    <a href="#"><img src="img/cat-img3.jpg" alt=""></a>
+                    <a class="blog-box_btn cart_btn" href="#">Подробнее</a>
+                    <div class="cart_info cat_info">
+                        <a href="#">Фильмы</a><br>
                     </div>
                 </div>
+
                 <div class="cart">
-                     <a href="#"><img src="img/haba.jpg" alt=""></a>
-                    <div class="cart_info">
-                        <a href="#">Мужская футболка ХБ<br> Khabib</a><br>
-                        <span>Цена: 1099 руб.</span>
+                    <a href="#"><img src="img/cat-img4.jpg" alt=""></a>
+                    <a class="blog-box_btn cart_btn" href="#">Подробнее</a>
+                    <div class="cart_info cat_info">
+                        <a href="#">Кинозвезды</a><br>
                     </div>
                 </div>
+
                 <div class="cart">
-                     <a href="#"><img src="img/haba.jpg" alt=""></a>
-                    <div class="cart_info">
-                        <a href="#">Мужская футболка ХБ<br> Khabib</a><br>
-                        <span>Цена: 1099 руб.</span>
+                    <a href="#"><img src="img/cat-img5.jpg" alt=""></a>
+                    <a class="blog-box_btn cart_btn" href="#">Подробнее</a>
+                    <div class="cart_info cat_info">
+                        <a href="#">Детские</a><br>
                     </div>
                 </div>
+                
             </div>
+
             <div class="pagination">
                 <ul>
                     <li><a href="#">Назад</a></li>
@@ -114,17 +118,6 @@
                 </ul>
             </div>
         </div>
-    </div>
-
-    <div class="cateory-bottom">
-        <h2 class="main-title">Футболки с Хабибом под заказ</h2>
-        <p>
-        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
-        </p>
-        <h2 class="main-title">Футболки с принтом Хабиба</h2>
-        <p>
-        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
-        </p>
     </div>
 </div>
 
